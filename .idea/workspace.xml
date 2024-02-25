@@ -4,27 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="621a977d-4254-4089-8d81-e8ca03f72a29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/lista_3_vetores.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista1-condicionais.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista1-lista6-mc102.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista2-lacos.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista3-vetores.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista4-strings.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista5-funcoes.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista6-registro-ordenacao.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_2_poo/_1_example_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_2_poo/_2_example_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/lista1-condicionais.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/lista2-lacos.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/lista3-vetores.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/lista4-strings.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/lista5-funcoes.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/lista6-registro-ordenacao.pdf" beforeDir="false" />
+    <list default="true" id="621a977d-4254-4089-8d81-e8ca03f72a29" name="Changes" comment="build: Class Person">
+      <change afterPath="$PROJECT_DIR$/_3_list_tuples_sets_dictionaries/2d_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_3_list_tuples_sets_dictionaries/dictionaries.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_3_list_tuples_sets_dictionaries/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_3_list_tuples_sets_dictionaries/sets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_3_list_tuples_sets_dictionaries/tuples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_4_dsa/array.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_4_dsa/binary_search_trees.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_4_dsa/hash_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_4_dsa/linked_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_4_dsa/recursion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_4_dsa/sorting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_5_advanced/dictionary_comprehensions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_5_advanced/filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_5_advanced/functions_to_variables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_5_advanced/high_order_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_5_advanced/lambda.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_5_advanced/list_comprehensions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_5_advanced/reduce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_5_advanced/zip_function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/abstract_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/function_to_variable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/inheritance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/method_chaining.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/method_overloading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/method_overriding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/mulitple_inheritance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/multilevel_inheritance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/object_as_argument.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_poo/super_function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_7_games/forca.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_7_games/quiz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_7_games/rock_paper_scissor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_7_games/snake.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_7_games/tic_tac_toe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_8_exercises/leet-code-solutions/Curso Intensivo de Python.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_8_exercises/leet-code-solutions/Introdução à Programação com Pyhton - Nilo Ney Coutinho Menezes.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_8_exercises/leet-code-solutions/ LeetCode Solutions.pdf" afterPathEscaped="$PROJECT_DIR$/_8_exercises/leet-code-solutions/🐍 LeetCode Solutions.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/_1_exercise.py" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/_1_exercise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-em-linguagem-c/algoritmos-em-linguagem-c.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-em-linguagem-c/algoritmos-em-linguagem-c.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-guanabara/lista-extra-guanabara-algoritmos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-guanabara/lista-extra-guanabara-algoritmos.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-ifba/lista-extra-ifba-algoritmos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-ifba/lista-extra-ifba-algoritmos.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/lista_3_vetores.py" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-unicamp/lista_3_vetores.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista1-condicionais.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-unicamp/listas/lista1-condicionais.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista1-lista6-mc102.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-unicamp/listas/lista1-lista6-mc102.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista2-lacos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-unicamp/listas/lista2-lacos.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista3-vetores.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-unicamp/listas/lista3-vetores.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista4-strings.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-unicamp/listas/lista4-strings.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista5-funcoes.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-unicamp/listas/lista5-funcoes.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/algoritmos-unicamp/listas/lista6-registro-ordenacao.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_8_exercises/algoritmos-unicamp/listas/lista6-registro-ordenacao.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_0_exercises/leet-code-solutions/java_leet_code_solutions.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1_hello_world/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/_0_hello_world/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2_poo/_1_example_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/_6_poo/_1_example_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2_poo/_2_example_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/_6_poo/_2_example_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2_poo/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/_6_poo/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_2_poo/restaurante.py" beforeDir="false" afterPath="$PROJECT_DIR$/_6_poo/restaurante.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +126,14 @@
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\vinic\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="61c60610-6e7a-41b3-85a0-a016800d141c" reportId="python-object-oriented-programming-expert/qodana/2024-02-15" />
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\python-object-oriented-programming-expert\_8_exercises\leet-code-solutions" />
+      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\python-object-oriented-programming-expert\_0_exercises" />
+      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\python-object-oriented-programming-expert\_1_hello_world" />
+      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\python-object-oriented-programming-expert\_2_poo" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -194,7 +238,20 @@
       <workItem from="1708688014559" duration="1079000" />
       <workItem from="1708689538479" duration="148000" />
       <workItem from="1708689698107" duration="848000" />
+      <workItem from="1708692764825" duration="246000" />
+      <workItem from="1708807947766" duration="72000" />
+      <workItem from="1708809571174" duration="1077000" />
+      <workItem from="1708824481251" duration="1082000" />
     </task>
+    <task id="LOCAL-00001" summary="build: Class Person">
+      <option name="closed" value="true" />
+      <created>1708692950901</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708692950903</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +259,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="build: Class Person" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: Class Person" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_object_oriented_programming_expert$app.coverage" NAME="app Coverage Results" MODIFIED="1708002608021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_1_hello_world" />
