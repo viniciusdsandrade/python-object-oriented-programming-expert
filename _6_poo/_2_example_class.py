@@ -10,7 +10,7 @@ class Pessoa:
         self.altura = altura
 
     @property
-    def getNome(self):
+    def get_nome(self):
         return self.nome
 
     @property
@@ -63,8 +63,6 @@ class Pessoa:
         return Pessoa(self.nome,
                       self.nascimento,
                       self.altura)
-
-        # como eu posso fazer um método que retorne a idade da pessoa?
 
     def idade(self):
         today = datetime.date.today()

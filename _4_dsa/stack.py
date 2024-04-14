@@ -42,15 +42,18 @@ class Stack:
         return str(self.stack)
 
 
+# FIFO - First In First Out
 s = Stack()
 s.push(1)
 s.push(3.2)
 s.push("Vinícius")
+print(f"Stack: {s}")
 
 r = Stack()
 r.push(1)
 r.push(3.2)
 r.push("Vinícius")
+print(f"Stack: {r}")
 
 dado = s.peek()
 print(dado)
