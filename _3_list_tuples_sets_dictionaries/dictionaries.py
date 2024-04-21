@@ -55,6 +55,37 @@ def test_invert_dict():
     print("invert_dict_3: ", invert_dict_3(dict_3))
 
 
+# 6. Escreva um programa que combine dois dicionários, somando os valores das chaves que aparecem em ambos.
+def combine_dicts_1(dict_1, dict_2):
+    combined_dict = dict_1.copy()
+    for key, value in dict_2.items():
+        if key in combined_dict:
+            combined_dict[key] += value
+        else:
+            combined_dict[key] = value
+    return combined_dict
+
+
+def combine_dicts_2(dict_1, dict_2):
+    combined_dict = dict_1.copy()
+    for key, value in dict_2.items():
+        combined_dict[key] = combined_dict.get(key, 0) + value
+    return combined_dict
+
+
+def test_combine_dicts():
+    dict_1 = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
+    dict_2 = {"a": 2, "b": 3, "c": 4, "d": 5, "e": 6}
+    print("dict_1:          ", dict_1)
+    print("dict_2:          ", dict_2)
+    print("combine_dicts_1: ", combine_dicts_1(dict_1, dict_2))
+
+    print("dict_1:          ", dict_1)
+    print("dict_2:          ", dict_2)
+    print("combine_dicts_2: ", combine_dicts_2(dict_1, dict_2))
+    print('--------------------------------------------------')
+
+
 # 8 - Escreva um programa que transforme uma lista de tuplas (chave, valor) em um dicionário.
 def list_to_dict_1(my_list):
     return dict(my_list)
@@ -86,6 +117,7 @@ def test_list_to_dict():
 
 
 def main():
+    test_combine_dicts()
     test_list_to_dict()
     test_invert_dict()
 

@@ -1,3 +1,6 @@
+from collections import deque
+
+
 # Fáceis:
 # 1. Crie uma lista com os primeiros 10 números inteiros e imprima-a.
 # 2. Escreva um programa que adicione um elemento ao final de uma lista existente.
@@ -37,6 +40,62 @@ def rotate_left_3(lst, n):
     return lst[n % len(lst):] + lst[:n % len(lst)]
 
 
+def rotate_left_4(lst, n):
+    d = deque(lst)
+    d.rotate(-n)
+    return list(d)
+
+
+def rotate_left_5(lst, n):
+    n = n % len(lst)  # Isso garante que n não seja maior que o comprimento da lista
+    return lst[n:] + lst[:n]
+
+
+def rotate_right_1(lst, n):
+    for _ in range(n):
+        lst.insert(0, lst.pop())
+    return lst
+
+
+def rotate_right_2(lst, n):
+    return lst[-n:] + lst[:-n]
+
+
+def rotate_right_3(lst, n):
+    return lst[-n % len(lst):] + lst[:-n % len(lst)]
+
+
+def rotate_right_4(lst, n):
+    d = deque(lst)
+    d.rotate(n)
+    return list(d)
+
+
+def rotate_right_5(lst, n):
+    n = n % len(lst)  # Isso garante que n não seja maior que o comprimento da lista
+    return lst[-n:] + lst[:-n]
+
+
+def test_rotate_right():
+    lista = [1, 2, 3, 4, 5]
+    print("lista original:", lista)
+
+    rotate_1 = rotate_right_1(lista, 2)
+    print("rotate_right_1:", rotate_1)
+
+    rotate_2 = rotate_right_2(lista, 2)
+    print("rotate_right_2:", rotate_2)
+
+    rotate_3 = rotate_right_3(lista, 2)
+    print("rotate_right_3:", rotate_3)
+
+    rotate_4 = rotate_right_4(lista, 2)
+    print("rotate_right_4:", rotate_4)
+
+    rotate_5 = rotate_right_5(lista, 2)
+    print("rotate_right_5:", rotate_5)
+
+
 def test_rotate_left():
     lista = [1, 2, 3, 4, 5]
     print("lista original:", lista)
@@ -49,6 +108,12 @@ def test_rotate_left():
 
     rotate_3 = rotate_left_3(lista, 2)
     print("rotate_left_3:", rotate_3)
+
+    rotate_4 = rotate_left_4(lista, 2)
+    print("rotate_left_4:", rotate_4)
+
+    rotate_5 = rotate_left_5(lista, 2)
+    print("rotate_left_5:", rotate_5)
 
 
 # 10. Escreva um programa que calcule a diferença entre o maior e o menor valor em uma lista.
@@ -85,7 +150,89 @@ def test_difference():
     print("difference_4:", diff_4)
 
 
+# 15. Escreva um programa que determine se uma lista é um palíndromo.
+def is_list_palindrome_1(lst: list) -> bool:
+    return lst == lst[::-1]
+
+
+def is_list_palindrome_2(lst: list) -> bool:
+    return all(lst[i] == lst[~i] for i in range(len(lst) // 2))
+
+
+def is_list_palindrome_3(lst: list) -> bool:
+    return lst == list(reversed(lst))
+
+
+def is_list_palindrome_4(lst: list) -> bool:
+    # 'Two Pointers'
+    esquerda = 0
+    direita = len(lst) - 1
+
+    while esquerda < direita:
+        if lst[esquerda] != lst[direita]:
+            return False
+        esquerda = esquerda + 1
+        direita = direita - 1
+    return True
+
+
+# 6. Escreva um programa que remova todos os elementos duplicados de uma lista.
+def remove_duplicates_1(lst: list) -> list:
+    """
+    Remove elementos duplicados de uma lista usando conjuntos (sets).
+
+    Args:
+      lst: A lista da qual remover as duplicatas.
+
+    Returns:
+      Uma nova lista com os elementos únicos de lst, sem ordem específica.
+    """
+    return list(set(lst))
+
+
+def remove_duplicates_2(lst: list) -> list:
+    """
+    Remove elementos duplicados de uma lista usando um dicionário.
+
+    Args:
+      lst: A lista da qual remover as duplicatas.
+
+    Returns:
+      Uma nova lista com os elementos únicos de lst, mantendo a ordem original.
+    """
+    return list(dict.fromkeys(lst))
+
+
+def remove_duplicates_3(lst: list) -> list:
+    """
+    Remove duplicatas de uma lista usando um loop e uma lista auxiliar.
+    """
+    seen = []
+    unique_lst = []
+    for item in lst:
+        if item not in seen:
+            seen.append(item)
+            unique_lst.append(item)
+    return unique_lst
+
+
+def test_remove_duplicates():
+    lst = [1, 2, 3, 4, 5, 1, 2, 3]
+    print("lista original:", lst)
+
+    unique_1 = remove_duplicates_1(lst)
+    print("remove_duplicates_1:", unique_1)
+
+    unique_2 = remove_duplicates_2(lst)
+    print("remove_duplicates_2:", unique_2)
+
+    unique_3 = remove_duplicates_3(lst)
+    print("remove_duplicates_3:", unique_3)
+
+
 def main():
+    test_remove_duplicates()
+    test_rotate_right()
     test_rotate_left()
     test_difference()
 

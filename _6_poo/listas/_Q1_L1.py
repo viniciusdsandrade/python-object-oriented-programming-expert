@@ -1,5 +1,6 @@
 import math
 
+
 # Questão 1
 
 # Escreva uma classe cujos objetos representam alunos matriculados em uma disciplina. Cada objeto
@@ -39,7 +40,7 @@ class Aluno:
         self.trabalho = trabalho
 
     def media(self):
-        return math.ceil((self.nota1 + self.nota2) * 2.5 + self.trabalho * 2)/7
+        return math.ceil((self.nota1 + self.nota2) * 2.5 + self.trabalho * 2) / 7
 
     def final(self):
         media = self.media()
@@ -69,7 +70,6 @@ class Aluno:
 aluno1 = Aluno(1, 'João', 7, 8, 9)
 aluno2 = Aluno(2, 'Maria', 5, 6, 7)
 aluno3 = Aluno()
-
 
 print(aluno1)
 print()

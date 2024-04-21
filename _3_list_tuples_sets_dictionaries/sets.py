@@ -28,7 +28,7 @@ from functools import reduce
 # 7. Crie um algoritmo que encontre a interseção de três conjuntos.
 # (Faça pelo menos 1 implementação sem usar o método intersection)
 def intersection_of_three_sets_1(set1, set2, set3):
-    return set1.intersection(set2, set3)
+    return set1.intersection_1(set2, set3)
 
 
 def intersection_of_three_sets_2(set1, set2, set3):
