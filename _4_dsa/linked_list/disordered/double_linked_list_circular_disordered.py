@@ -5,16 +5,16 @@ class DoubleLinkedListCircularDisoreded:
             self.proximo = proximo
             self.anterior = anterior
 
-        def get_elemento(self):
+        def getElemento(self):
             return self.elemento
 
-        def get_proximo(self):
+        def getProximo(self):
             return self.proximo
 
-        def get_anterior(self):
+        def getAnterior(self):
             return self.anterior
 
-        def clone(self):
+        def __copy__(self):
             return DoubleLinkedListCircularDisoreded.Node(self.elemento, self.proximo, self.anterior)
 
         def __eq__(self, other):
@@ -39,16 +39,16 @@ class DoubleLinkedListCircularDisoreded:
         self.ultimo = None
         self.tamanho = 0
 
-    def get_primeiro(self):
+    def getPrimeiro(self):
         return self.primeiro
 
-    def get_ultimo(self):
+    def getUltimo(self):
         return self.ultimo
 
-    def get_tamanho(self):
+    def getTamanho(self):
         return self.tamanho
 
-    def add_last(self, elemento):
+    def addLast(self, elemento):
         if elemento is None:
             raise ValueError("Elemento não pode ser nulo.")
 
@@ -70,7 +70,7 @@ class DoubleLinkedListCircularDisoreded:
         self.ultimo = novo
         self.tamanho += 1
 
-    def add_first(self, elemento):
+    def addFirst(self, elemento):
         if elemento is None:
             raise ValueError("Elemento não pode ser nulo.")
 
@@ -93,16 +93,16 @@ class DoubleLinkedListCircularDisoreded:
 
         self.tamanho += 1
 
-    def add_at(self, elemento, indice):
+    def add(self, elemento, indice):
         if indice < 0 or indice > self.tamanho:
             raise IndexError("Índice fora dos limites da lista.")
 
         if indice == 0:
-            self.add_first(elemento)
+            self.addFirst(elemento)
             return
 
         if indice == self.tamanho:
-            self.add_last(elemento)
+            self.addLast(elemento)
             return
 
         novo = DoubleLinkedListCircularDisoreded.Node(elemento)
@@ -190,7 +190,7 @@ class DoubleLinkedListCircularDisoreded:
 
         self.tamanho -= 1
 
-    def is_empty(self):
+    def isEmpty(self):
         return self.tamanho == 0
 
     def __len__(self):
@@ -232,11 +232,11 @@ class DoubleLinkedListCircularDisoreded:
 
         temp = self.primeiro
         while temp is not None and temp != self.ultimo:
-            self.add_last(temp.elemento)  # Assumindo que add_last está implementado
+            self.addLast(temp.elemento)  # Assumindo que add_last está implementado
             temp = temp.proximo
 
         if self.ultimo is not None:
-            self.add_last(self.ultimo.elemento)
+            self.addLast(self.ultimo.elemento)
 
         self.tamanho = self.tamanho
 
@@ -292,18 +292,18 @@ class DoubleLinkedListCircularDisoreded:
 
 def test():
     lista = DoubleLinkedListCircularDisoreded()
-    lista.add_last(1)
-    lista.add_last(2)
-    lista.add_last(3)
-    lista.add_last(4)
-    lista.add_last(5)
+    lista.addLast(1)
+    lista.addLast(2)
+    lista.addLast(3)
+    lista.addLast(4)
+    lista.addLast(5)
 
     print(lista)
-    print(lista.get_primeiro())
+    print(lista.getPrimeiro())
     print(lista.ultimo.proximo)
     print(lista.primeiro.anterior.anterior.anterior.anterior.anterior)
 
-    for i in range(lista.get_tamanho()):
+    for i in range(lista.getTamanho()):
         print("Elemento na posição", i, ":", lista.get(i))
 
 

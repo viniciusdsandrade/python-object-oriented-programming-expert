@@ -87,7 +87,7 @@ class Date:
         if self.compare(other) == 0:
             return 0
         if self.compare(other) == 1:
-            return self.get_difference_between_two_dates(other.clone())
+            return self.get_difference_between_two_dates(other.__copy__())
         else:
             days = 0
             while self.compare(other) == -1:
