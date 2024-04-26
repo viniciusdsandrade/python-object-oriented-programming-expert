@@ -1,13 +1,16 @@
+import copy
+
+
 # Questão 2
 # Escreva uma classe Data cuja instância (objeto) represente uma data. Esta classe deverá dispor dos
 # seguintes métodos:
-# 1 - construtor:  define a data que determinado objeto (através de parâmetro), este método verifica se a
+# 1 - construtor: define a data que determinado objeto (por parâmetro), este método verifica se a
 #       data está correta, caso não esteja a data é configurada como 01/01/0001
-# 2 - compara: recebe como parâmetro um outro objeto da Classe data, compare com a data corrente e
-# retorne:
-#   0  se as datas forem iguais;
-#   1  se a data corrente for maior que a do parâmetro;
-#  -1  se a data do parâmetro for maior que a corrente.
+# 2 - compara: recebe como parâmetro outro objeto da Classe data, compare com a data corrente e
+#   retorne:
+#       0  se as datas forem iguais;
+#       1  se a data corrente for maior que a do parâmetro;
+#       -1  se a data do parâmetro for maior que a corrente.
 # 3 - getDia retorna o dia da data
 # 4 - getMes retorna o mês da data
 # 5 - getMesExtenso retorna o mês da data corrente por extenso
@@ -18,7 +21,6 @@
 
 class Date:
     def __init__(self, day, month, year):
-
         if not isinstance(day, int):
             raise TypeError('Dia deve ser um número inteiro')
 
@@ -47,10 +49,14 @@ class Date:
 
     @staticmethod
     def is_bissexto(year):
-        if year % 4 != 0: return False
-        elif year % 100 != 0: return True
-        elif year % 400 != 0: return False
-        else: return True
+        if year % 4 != 0:
+            return False
+        elif year % 100 != 0:
+            return True
+        elif year % 400 != 0:
+            return False
+        else:
+            return True
 
     def get_week_day_name(self):
         day = self.day
@@ -77,11 +83,14 @@ class Date:
                   'Novembro', 'Dezembro']
         return months[self.month - 1]
 
-    def get_day(self): return self.day
+    def get_day(self):
+        return self.day
 
-    def get_month(self): return self.month
+    def get_month(self):
+        return self.month
 
-    def get_year(self): return self.year
+    def get_year(self):
+        return self.year
 
     def get_difference_between_two_dates(self, other):
         if self.compare(other) == 0:
@@ -103,9 +112,6 @@ class Date:
                         other.day = 29 if other.is_bissexto(other.year) else 28
             return days
 
-    def clone(self):
-        return Date(self.day, self.month, self.year)
-
     def compare(self, other):
         if self.year > other.year:
             return 1
@@ -124,6 +130,13 @@ class Date:
                 else:
                     return 0
 
+    def __dict__(self):
+        return {
+            'day': self.day,
+            'month': self.month,
+            'year': self.year
+        }
+
     def __eq__(self, other):
         return (self.day == other.day and
                 self.month == other.month and
@@ -132,8 +145,16 @@ class Date:
     def __hash__(self):
         return hash((self.day, self.month, self.year))
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}({self.day!r}, {self.month!r}, {self.year!r})"
+
     def __str__(self):
         return f'{self.day}/{self.month}/{self.year}'
+
+    def __copy__(self):
+        return Date(copy.deepcopy(self.day),
+                    copy.deepcopy(self.month),
+                    copy.deepcopy(self.year))
 
 
 date1 = Date(6, 12, 2001)
