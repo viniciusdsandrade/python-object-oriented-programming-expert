@@ -1,11 +1,11 @@
-from abc import abstractmethod, ABC
+from abc import abstractmethod, ABC  # Abstract Base Class
 from copy import deepcopy
 from typing import List
 import string
 
 
 class Person:
-    def __init__(self, name: string, address: string):
+    def __init__(self, name: string, address: string) -> None:
         self._name = name
         self._address = address
 
@@ -56,10 +56,10 @@ class Student(Person):
     courses: List = []
     grades: List = []
 
-    def __init__(self, name: string, address: string):
+    def __init__(self, name: string, address: string) -> None:
         super().__init__(name, address)
 
-    def addCourseGrade(self, course: string, grade: string):
+    def addCourseGrade(self, course: string, grade: string) -> None:
         self.courses.append(course)
         self.grades.append(grade)
         self.nCourses += 1
@@ -68,7 +68,10 @@ class Student(Person):
         return sum(self.grades) / self.nCourses
 
     def __dict__(self) -> dict:
-        return {'name': super().name, 'address': super().address}
+        return {
+            'name': super().name,
+            'address': super().address
+        }
 
     def __copy__(self) -> __init__:
         return Student(deepcopy(super().name),
@@ -83,10 +86,7 @@ class Student(Person):
         prime = 31
         res = super().__hash__()
         res *= prime + self.nCourses
-
-        for course in self.courses:
-            res *= prime + hash(course)
-
+        res *= prime + hash(tuple(self.courses))
         if res < 0: res = - res
         return res
 
@@ -95,7 +95,7 @@ class Student(Person):
 
 
 class Teacher(Person):
-    def __init__(self, name: string, address: string):
+    def __init__(self, name: string, address: string) -> None:
         super().__init__(name, address)
         self.courses = []
         self.n_courses = 0
@@ -106,7 +106,7 @@ class Teacher(Person):
 
     @property
     def n_courses(self) -> int:
-        return self._n_courses  # Retorne o atributo interno, não self.n_courses
+        return self._n_courses
 
     def addCourse(self, course: string) -> None:
         self.courses.append(course)
@@ -118,7 +118,7 @@ class Teacher(Person):
     def getSalary(self) -> float:
         pass
 
-    def __dict__(self):
+    def __dict__(self) -> dict:
         return {
             'name': super().name,
             'address': super().address,
