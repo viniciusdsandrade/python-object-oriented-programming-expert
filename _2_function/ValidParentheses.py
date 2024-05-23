@@ -1,5 +1,6 @@
 # 20. Valid Parentheses
-# Given a string 's' containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+# Given a string 's' containing just the characters '(', ')', '{', '}', '[' and ']',
+# determine if the input string is valid.
 
 # An input string is valid if:
 
@@ -40,7 +41,7 @@ def isValid(s: str) -> bool:
     return not stack
 
 
-def test_solution(isValid):
+def test_solution(is_valid):
     # Dicionário expandido de casos de teste com os resultados esperados
     test_cases = {
         "()": True,
@@ -68,13 +69,13 @@ def test_solution(isValid):
 
     # Testando cada caso
     for input_string, expected_result in test_cases.items():
-        result = isValid(input_string)
+        result = is_valid(input_string)
         print(
             f"Input: {input_string} | Expected: {expected_result} | Result: {result} | Test Passed: {result == expected_result}")
 
 
-def main(isValid):
-    test_solution(isValid)
+def main(is_valid):
+    test_solution(is_valid)
 
 
 if __name__ == "__main__":

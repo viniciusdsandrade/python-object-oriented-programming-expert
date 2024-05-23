@@ -11,7 +11,7 @@ from typing import List
 # but instead be stored inside the array nums1.
 # To accommodate this, nums1 has a length of m + n,
 # the first m elements denote the elements that should be merged,
-# and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+# and the last n elements are set to 0 and should be ignored. Nums2 has a length of n.
 
 
 # Example 1:
