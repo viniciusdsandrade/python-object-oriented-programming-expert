@@ -14,28 +14,12 @@ class Pessoa(ABC):
         Pessoa.QTD_PESSOAS += 1
 
     @staticmethod
-    def validar_nome(nome: str):
-        """Valida o nome da pessoa.
-
-        Args:
-            nome: O nome a ser validado.
-
-        Raises:
-            ValueError: Se o nome não for uma string não vazia.
-        """
+    def validar_nome(nome: str) -> None:
         if not isinstance(nome, str) or not nome.strip():
             raise ValueError("O nome deve ser uma string não vazia.")
 
     @staticmethod
-    def validar_idade(idade: int):
-        """Valida a idade da pessoa.
-
-        Args:
-            idade: A idade a ser validada.
-
-        Raises:
-            ValueError: Se a idade não for um inteiro positivo.
-        """
+    def validar_idade(idade: int) -> None:
         if not isinstance(idade, int) or idade <= 0:
             raise ValueError("A idade deve ser um número inteiro positivo.")
 
@@ -81,7 +65,7 @@ class Pessoa(ABC):
 class PessoaFisica(Pessoa):
     def __init__(self, nome: str, idade: int, cpf: str):
         super().__init__(nome, idade)
-        self.validar_cpf(cpf)  # Valida o CPF antes de atribuir
+        self.validar_cpf(cpf)
         self.__cpf = cpf
 
     @property
@@ -105,10 +89,10 @@ class PessoaFisica(Pessoa):
         return True
 
     def __str__(self) -> str:
-        pessoa_str = super().__str__()  # Chama o __str__ da classe pai e guarda o resultado
-        return (f'{pessoa_str[:-2]}\n'  # Remove os últimos caracteres ('\n}') da string da classe pai
-                f'  "cpf": "{self.cpf}"\n'  # Adiciona o CPF
-                f'}}')  # Fecha a string JSON
+        pessoa_str = super().__str__()
+        return (f'{pessoa_str[:-2]}\n'
+                f'  "cpf": "{self.cpf}"\n'
+                f'}}')
 
     def __eq__(self, other) -> bool:
         if not isinstance(other, PessoaFisica):

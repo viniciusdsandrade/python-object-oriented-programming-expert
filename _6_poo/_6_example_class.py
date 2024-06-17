@@ -3,7 +3,7 @@ from copy import deepcopy
 
 class Pessoa:
     def __init__(self, nome: str, idade: int, sexo: str):
-        self._nome = nome  # _ is a convention to indicate that the attribute is private
+        self._nome = nome
         self._idade = idade
         self._sexo = sexo
 

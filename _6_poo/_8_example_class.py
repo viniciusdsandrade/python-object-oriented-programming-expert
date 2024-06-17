@@ -1,5 +1,3 @@
-# Crie uma classe chamada 'Numeros' que possui um único atributo de classe chamad 'MULTIPLIER' e um construtor que
-# usa os parâmetros 'x' e 'y' (todos devem ser numeros)
 import copy
 import decimal
 from typing import Tuple, Dict
@@ -17,11 +15,9 @@ class Numeros:
         self.y = y
 
     def soma(self) -> decimal:
-        """Retorna a soma dos atributos 'x' e 'y'."""
         return self.x + self.y
 
     def subtrai(self) -> decimal:
-        """Retorna a subtração dos atributos 'x' e 'y'."""
         return self.x - self.y
 
     def divide(self) -> decimal:
@@ -29,7 +25,6 @@ class Numeros:
             raise ValueError('y não pode ser 0')
         return self.x / self.y
 
-    # Quero definir os Getters e Setters para x e y
     @property
     def x(self) -> decimal:
         return self._x
@@ -52,12 +47,10 @@ class Numeros:
 
     @classmethod
     def multiplica(cls, a: float) -> decimal:
-        """Retorna o produto de 'a' e MULTIPLIER."""
         return a * cls.MULTIPLIER
 
     @property
     def valor(self) -> Tuple[decimal, decimal]:
-        """Retorna uma tupla contendo os valores de 'x' e 'y'."""
         return self.x, self.y
 
     def __repr__(self) -> str:

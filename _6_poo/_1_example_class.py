@@ -36,7 +36,7 @@ class Rectangle:
 
 
 p = Point(1, 2)
-print(p)  # Point(1, 2)
+print(p)
 
 p3d = Point3D(1, 2, 3)
-print(p3d)  # Point3D(1, 2, 3)
+print(p3d)

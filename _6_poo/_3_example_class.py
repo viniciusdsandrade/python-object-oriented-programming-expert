@@ -1,17 +1,6 @@
 import copy
 
 
-# Criar uma classe chamada Carro com os seguintes atributos:
-# 1 - modelo
-# 2 - cor
-# 3 - ano
-# 4 - preco
-# 5 - total_carros(deve ser um atributo de classe)
-# Crie os métodos:
-# set e get para cada atributo,
-# um construtor,
-# um método imprimir_carro e um método imprimir_total.
-
 class Carro:
     total_carros = 0  # Atributo de class
 
@@ -79,11 +68,9 @@ class Carro:
         print(f'Total de carros: {Carro.total_carros}')
 
     def __str__(self):
-        """Representação legível para humanos."""
         return f"Modelo: {self.modelo}\nCor: {self.cor}\nAno: {self.ano}\nPreço: {self.preco}"
 
     def __repr__(self):
-        """Representação oficial do objeto."""
         return f"{self.__class__.__name__}({self.modelo!r}, {self.cor!r}, {self.ano!r}, {self.preco!r})"
 
     def __dict__(self):
